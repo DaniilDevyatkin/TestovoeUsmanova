@@ -910,6 +910,59 @@
                 </div>
             </div>
 
+            <!-- Screen 4: Form -->
+            <div id="form" class="lt-block lt-view bld01 lt-onecolumn lt-onecolumn-common">
+                <div class="lt-block-wrapper" style="padding-top: 60px; padding-bottom: 60px; background-color: #F3F3F3;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="modal-block-content block-box col-md-4 col-md-offset-4 text-left" style="background-color:#ffffff; padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px; border: 0px solid #999999; border-radius: 20px;">
+                                <div class="builder-item part-header text-center" style="margin-bottom: 15px;">
+                                    <p style="font-size:26px; line-height:1.2; color:#F66297; font-weight:600;">
+                                        Запишитесь на консультацию
+                                    </p>
+                                </div>
+                                <div class="builder-item part-header text-center" style="margin-bottom: 20px;">
+                                    <p style="font-size:16px; line-height:1.2; color:#F66297; font-weight:500;">
+                                        Оставьте заявку и мы подберём программу
+                                    </p>
+                                </div>
+                                <form id="consultForm" class="lt-form" onsubmit="return handleSubmit(event)">
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 5px;">Ваше имя</label>
+                                        <input type="text" id="name" class="f-input" placeholder="Введите имя" required>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 5px;">Телефон</label>
+                                        <input type="tel" id="phone" class="f-input" placeholder="+7 (___) ___-__-__" required>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 5px;">Ваша цель</label>
+                                        <select id="goal" class="f-input" required>
+                                            <option value="">Выберите цель</option>
+                                            <option value="loss">Похудеть</option>
+                                            <option value="shape">Подтянуть фигуру</option>
+                                            <option value="gym">Набрать форму в зале</option>
+                                            <option value="postpartum">Восстановление после родов</option>
+                                        </select>
+                                    </div>
+                                    <div class="global-confirm-checkbox-block" style="margin-bottom: 25px;">
+                                        <label class="checkbox-text">
+                                            <input type="checkbox" id="consent" required style="margin-right: 10px;">
+                                            Я согласен с <a href="#" target="_blank">условиями оферты</a> и <a href="#" target="_blank">политикой обработки персональных данных</a>
+                                        </label>
+                                    </div>
+                                    <div class="builder-item part-button g text-center" style="margin-bottom: 0px;">
+                                        <button type="submit" class="btn f-btn button-md btn-success">
+                                            Отправить заявку
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -932,40 +985,15 @@
     <script>
         $(function() {
             $('#button3374378').on('click', function(e) {
-                e.preventDefault();
-                var $target = $('#ltBlock2235341295');
-                if ($target.length) {
-                    $('html, body').animate({ scrollTop: $target.offset().top }, 600);
-                }
+                location.href = '#form';
             });
 
             $('#button5454037, #button8009648').on('click', function(e) {
-                e.preventDefault();
-                var $target = $('#ltBlock2235313467');
-                if ($target.length) {
-                    $('html, body').animate({ scrollTop: $target.offset().top }, 600);
-                }
+                location.href = '#form';
             });
 
             $('#button2928756').on('click', function(e) {
-                e.preventDefault();
-                var baseUrl = 'https://usmanovafit.gymteam.ru/partnerregistration';
-                var query = window.location.search;
-                if (!query || query === '?') {
-                    window.location.href = baseUrl;
-                    return;
-                }
-                try {
-                    var url = new URL(baseUrl, window.location.origin);
-                    if (url.search) {
-                        url.search = '?' + url.search.substring(1) + '&' + query.substring(1);
-                    } else {
-                        url.search = query;
-                    }
-                    window.location.href = url.toString();
-                } catch (err) {
-                    window.location.href = baseUrl;
-                }
+                location.href = '#form';
             });
 
             var $phone = $('#phone');
