@@ -985,15 +985,21 @@
     <script>
         $(function() {
             $('#button3374378').on('click', function(e) {
-                location.href = '#form';
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
+                return false;
             });
 
             $('#button5454037, #button8009648').on('click', function(e) {
-                location.href = '#form';
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
+                return false;
             });
 
             $('#button2928756').on('click', function(e) {
-                location.href = '#form';
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
+                return false;
             });
 
             var $phone = $('#phone');
