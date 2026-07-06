@@ -132,6 +132,33 @@
         ::selection { background-color: #abb7bd; color: #ffffff; }
         .modal-content button.btn.f-btn { z-index: 9000; }
         .w-100 button.btn.f-btn { width: 100%; }
+        .modal .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #F66297;
+            color: #fff;
+            font-size: 22px;
+            line-height: 36px;
+            text-align: center;
+            opacity: 1;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            z-index: 10;
+            text-shadow: none;
+            font-weight: 400;
+        }
+        .modal .close:hover {
+            background: #e5558a;
+        }
+        .modal .close span {
+            display: block;
+            line-height: 36px;
+        }
         @media (max-width: 640px) {
             .text-subnormal { font-size: 18px!important; }
         }
@@ -914,7 +941,7 @@
             <div id="formModal" class="modal fade" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content" style="background-color: #ffffff; box-shadow: none; border: none; border-radius: 20px; padding: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 15px; right: 15px; font-size: 24px; z-index: 10;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="modal-body" style="padding: 0;">
@@ -972,7 +999,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="background-color: #ffffff; box-shadow: none; border: none; border-radius: 20px;">
                 <div class="modal-body" style="padding: 40px 30px; text-align: center;">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 15px; right: 15px; font-size: 24px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h3 style="font-size: 22px; font-weight: 600; color: #F66297; margin-bottom: 15px;">Заявка отправлена!</h3>
