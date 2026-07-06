@@ -591,7 +591,7 @@
                                 </div>
                             </div>
                             <div class="builder-item part-button g text-left" style="margin-bottom: 5px;" id="aa6fd3cac5">
-                                <button type="button" id="button3374378" class="btn f-btn button-md btn-success">
+                                <button type="button" id="button3374378" class="btn f-btn button-md btn-success" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});return false;">
                                     Выбрать программу
                                 </button>
                             </div>
@@ -639,7 +639,7 @@
                                     </div>
                                 </div>
                                 <div class="builder-item part-button g text-center" style="margin-bottom: 5px; margin-top: 0px;" id="a73133b31f">
-                                    <button type="button" id="button2928756" class="btn f-btn button-md btn-success">
+                                    <button type="button" id="button2928756" class="btn f-btn button-md btn-success" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});return false;">
                                         Выбрать программу
                                     </button>
                                 </div>
@@ -863,7 +863,7 @@
                                     </div>
                                 </div>
                                 <div class="builder-item part-button g text-center" style="margin-bottom: 0px;">
-                                    <button type="button" id="button5454037" class="btn f-btn button-md btn-success">
+                                    <button type="button" id="button5454037" class="btn f-btn button-md btn-success" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});return false;">
                                         Вернуть форму
                                     </button>
                                 </div>
@@ -900,7 +900,7 @@
                                     </div>
                                 </div>
                                 <div class="builder-item part-button g text-center" style="margin-bottom: 0px;">
-                                    <button type="button" id="button8009648" class="btn f-btn button-md btn-success">
+                                    <button type="button" id="button8009648" class="btn f-btn button-md btn-success" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});return false;">
                                         Вернуть форму
                                     </button>
                                 </div>
@@ -984,24 +984,6 @@
 
     <script>
         $(function() {
-            $('#button3374378').on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
-                return false;
-            });
-
-            $('#button5454037, #button8009648').on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
-                return false;
-            });
-
-            $('#button2928756').on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({ scrollTop: $('#form').offset().top }, 600);
-                return false;
-            });
-
             var $phone = $('#phone');
             if ($phone.length) {
                 $phone.on('input', function() {
